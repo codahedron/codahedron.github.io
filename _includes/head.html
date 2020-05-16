@@ -1,0 +1,46 @@
+{%- assign canonical_url = page.url | replace: "index.html", "" | absolute_url %}
+
+{%- if page.date -%}
+{%- assign og_type = "article" -%}
+{%- else -%}
+{%- assign og_type = "website" -%}
+{%- endif -%}
+
+{% assign description = {{site.description}} %}
+{% if page.description %}
+{% assign description = {{page.description | markdownify | strip_html }} %}
+{% endif %}
+
+<head>
+   <meta charset="utf-8">
+   <title>{{ page.title }}</title>
+   <meta name="description" content="{{ description }}">
+   {% if author.name %}
+   <meta name="author" content="{{ author.name | default: author }}">
+   {% endif %}
+   <meta name="HandheldFriendly" content="True">
+   <meta name="MobileOptimized" content="320">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <meta property="og:type" content="{{ og_type }}">
+   <meta property="og:locale" content="{{ site.locale | replace: "-", "_" | default: "en_US" }}">
+   <meta property="og:site_name" content="{{ site.title }}">
+   <meta property="og:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
+   <meta property="og:description" content="{{ description }}">
+   <meta property="og:url" content="{{ canonical_url }}">
+   {% if page.thumb %}
+   <meta property="og:image" content="{{ site.url }}{{ page.thumb }}" />
+   {% else %}
+   <meta property="og:image" content="{{ site.url }}/assets/images/20180331_eric_github.jpg" />
+   {% endif %}
+   <link rel="canonical" href="{{ canonical_url }}">
+
+   <link rel="stylesheet" type="text/css" href="/css/main.css">
+   <link rel="stylesheet" type="text/css" href="/css/all.css">
+   <meta name="theme-color" content="#fafafa">
+
+   <link rel="manifest" href="site.webmanifest">
+   <link rel="apple-touch-icon" href="icon.png">
+   <link rel="icon" type="image/png" href="{{ site.baseurl }}/icon.png">
+   <!-- Place favicon.ico in the root directory -->
+</head>

@@ -60,6 +60,11 @@ hr {
    grid-template-columns: 1fr [primary] 80ch 1fr;
    grid-template-rows: [nav] 5em [primary] 1fr [footer] 5em;
 
+   @media only screen and (max-width: 90ch) {
+      grid-template-columns: [primary] 1fr;
+   }
+
+
    //margin-bottom: 2em;
    line-height: 1.5;
    height: 100%;
@@ -91,7 +96,7 @@ hr {
 
 .main-content {
    grid-row: primary;
-   grid-column: 2;
+   grid-column: primary;
    align-self: start;
 
    padding: 2ch;

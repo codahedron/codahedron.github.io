@@ -3,7 +3,11 @@
 $project-card-margin: 1ch;
 
 .projects-content {
-   margin: auto;
+   grid-row: primary;
+   grid-column: 1 / end;
+
+   margin-left: auto;
+   margin-right: auto;
    max-width: 120ch;
    padding: 2ch;
 }

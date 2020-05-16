@@ -1,13 +1,21 @@
 $nav-item-border-width: 6px;
 $nav-item-font-size: 1.1em;
 
-
 // NAV BAR
 nav {
+   grid-row: nav;
+   grid-column: primary;
+   align-self: center;
    display: flex;
    flex: 1;
-   min-height: 5em;
+   height: 100%;
    background: $primary-color;
+   border-top: $nav-border;
+   border-bottom: $nav-border;
+
+   img {
+      width: 50px;
+   }
 }
 
 nav .inner-nav {

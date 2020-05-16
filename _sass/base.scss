@@ -1,11 +1,11 @@
 @import 'variables';
 
 /* colors */
-$background-color: #eeeeee !default;
+$background-color: #111 !default;
 $background-color-code: #fafafa;
 
-$primary-color: #1f619e !default;
-$secondary-color: #f5f5ff;
+$primary-color: #111 !default;
+$secondary-color: #383;
 $tertiary-color: mix($secondary-color, $background-color, 80%);
 
 $text-dark: #222831 !default;
@@ -17,6 +17,8 @@ $border-color: darken($primary-color, 20%);
 $highlight-color: #21adff !default;
 $highlight-time: 0.4s;
 
+$nav-border: 1px dashed $text-light;
+
 // MAIN
 html {
    height: 100%;
@@ -24,10 +26,9 @@ html {
 
 body {
    background-color: $background-color;
-   font-family: $sans-serif;
+   font-family: $monospace;
    min-width: 30ch;
-   display: flex;
-   flex-direction: column;
+
    height: 100%;
 }
 
@@ -42,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3, h4, h5, h6, p {
-   color: $text-dark;
+   color: $text-light;
 }
 
 p {
@@ -55,8 +56,13 @@ hr {
 }
 
 .content {
-   margin-bottom: 2em;
+   display: grid;
+   grid-template-columns: 1fr [primary] 80ch 1fr;
+   grid-template-rows: [nav] 5em [primary] 1fr [footer] 5em;
+
+   //margin-bottom: 2em;
    line-height: 1.5;
+   height: 100%;
 }
 
 .content p a {
@@ -84,8 +90,10 @@ hr {
 }
 
 .main-content {
-   margin: auto;
-   max-width: 80ch;
+   grid-row: primary;
+   grid-column: 2;
+   //margin: auto;
+   //max-width: 80ch;
    padding: 2ch;
 }
 
@@ -157,13 +165,12 @@ td > code {
 
 // FOOTER
 footer {
-   background: saturate(darken($primary-color, 15%), 10%);
-   min-height: 7em;
-   //display: flex;
-   //justify-content: center; // X centering
-   //align-items: center; // Y centering
-   //margin-top: 2em;
-   margin-top: auto;
+   grid-column: primary;
+   grid-row: footer;
+
+   background: $primary-color;
+   
+   border-top: $nav-border;
 }
 
 footer .copyright p {

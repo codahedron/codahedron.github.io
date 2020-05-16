@@ -10,11 +10,12 @@ nav {
    flex: 1;
    height: 100%;
    background: $primary-color;
-   border-top: $nav-border;
+   //border-top: $nav-border;
    border-bottom: $nav-border;
 
    img {
       width: 50px;
+      margin-right: 1ch;
    }
 }
 
@@ -44,9 +45,9 @@ nav .nav-item {
    text-decoration: none;
    //font-weight: bold;
 
-   border-bottom: $nav-item-border-width solid transparent;
-   border-top: $nav-item-border-width solid transparent;
-   transition: border $highlight-time;
+   //border-bottom: $nav-item-border-width solid transparent;
+   //border-top: $nav-item-border-width solid transparent;
+   transition: background-color $highlight-time;
 }
 
 nav .nav-item-left {
@@ -68,6 +69,8 @@ nav .nav-item-left {
 }
 
 nav .nav-item:hover {
-   border-bottom: $nav-item-border-width solid $secondary-color;
-   border-top: $nav-item-border-width solid transparent;
+   //border-bottom: $nav-item-border-width solid $secondary-color;
+   //border-top: $nav-item-border-width solid transparent;
+   background-color: $text-light;
+   color: $background-color;
 }

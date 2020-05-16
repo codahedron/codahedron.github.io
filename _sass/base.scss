@@ -15,7 +15,7 @@ $link-dark: #0868a0 !default;
 
 $border-color: darken($primary-color, 20%);
 $highlight-color: #21adff !default;
-$highlight-time: 0.4s;
+$highlight-time: 0.2s;
 
 $nav-border: 1px dashed $text-light;
 
@@ -92,17 +92,12 @@ hr {
 .main-content {
    grid-row: primary;
    grid-column: 2;
-   //margin: auto;
-   //max-width: 80ch;
+   align-self: start;
+
    padding: 2ch;
-}
 
-.main-content h1 {
-   //margin-top: 0.5em;
-   //margin-bottom: -0.5em;
-}
+   //border: 1px dotted $text-light;
 
-.main-content {
    h2, h3 {
       margin-top: 0.5em;
       margin-bottom: -0.5em;
@@ -169,7 +164,7 @@ footer {
    grid-row: footer;
 
    background: $primary-color;
-   
+
    border-top: $nav-border;
 }
 

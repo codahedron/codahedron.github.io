@@ -9,9 +9,9 @@ nav {
    display: flex;
    flex: 1;
    height: 100%;
-   background: $primary-color;
+   //background: $primary-color;
    //border-top: $nav-border;
-   border-bottom: $nav-border;
+   //border-bottom: $nav-border;
 
    img {
       width: 50px;
@@ -41,7 +41,7 @@ nav .nav-item {
    //background: #f00;
 
    font-size: $nav-item-font-size;
-   color: $text-light;
+   color: $text-color;
    text-decoration: none;
    //font-weight: bold;
 
@@ -60,7 +60,7 @@ nav .nav-item-left {
 
    font-size: $nav-item-font-size;
    font-weight: bold;
-   color: $text-light;
+   color: $text-color;
    text-decoration: none;
 
    @media (max-width: 450px) {
@@ -71,6 +71,6 @@ nav .nav-item-left {
 nav .nav-item:hover {
    //border-bottom: $nav-item-border-width solid $secondary-color;
    //border-top: $nav-item-border-width solid transparent;
-   background-color: $text-light;
+   background-color: $text-color;
    color: $background-color;
 }

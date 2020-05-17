@@ -1,7 +1,7 @@
 ---
-title: Blog
+title: News
 author_profile: true
-permalink: /blog/
+permalink: /news/
 ---
 
 {% for post in site.posts%}

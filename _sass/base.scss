@@ -4,12 +4,13 @@
 $background-color: #111 !default;
 $background-color-code: #fafafa;
 
-$primary-color: #111 !default;
+$primary-color: #37a !default;
 $secondary-color: #383;
 $tertiary-color: mix($secondary-color, $background-color, 80%);
 
 $text-dark: #222831 !default;
 $text-light: #f5f5ff !default;
+$text-color: $text-light;
 
 $link-dark: #0868a0 !default;
 
@@ -17,7 +18,8 @@ $border-color: darken($primary-color, 20%);
 $highlight-color: #21adff !default;
 $highlight-time: 0.2s;
 
-$nav-border: 1px dashed $text-light;
+$nav-border: 1px dashed $text-color;
+$gap-size: 2ch;
 
 // MAIN
 html {
@@ -25,11 +27,40 @@ html {
 }
 
 body {
-   background-color: $background-color;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: $gap-size [primary] 1fr $gap-size;
+
+   //background-color: $background-color;
+   background: url("/assets/images/idyllic-isle-small.jpg");
+   //background: linear-gradient(90deg, #111a 0%, #111f 10%, #111f 90%, #111a 100%), url("/assets/images/matrix.png");
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
    font-family: $monospace;
    min-width: 30ch;
 
-   height: 100%;
+   //margin-bottom: 2em;
+   line-height: 1.5;
+   height: 100vh;
+}
+
+.content {
+   //min-height: 100%;
+   grid-row: primary;
+
+   display: grid;
+   grid-template-columns: 1fr [primary] 80ch 1fr;
+   grid-template-rows: [nav] 5em [primary] 1fr [footer] 5em;
+   grid-gap: $gap-size;
+
+   @media only screen and (max-width: 90ch) {
+      grid-template-columns: [primary] 1fr;
+   }
+}
+
+body p a:hover {
+   color: saturate(lighten($link-dark, 20%), 20%);
 }
 
 a {
@@ -43,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3, h4, h5, h6, p {
-   color: $text-light;
+   color: $text-color;
 }
 
 p {
@@ -55,35 +86,14 @@ hr {
    line-height: 0.5;
 }
 
-.content {
-   display: grid;
-   grid-template-columns: 1fr [primary] 80ch 1fr;
-   grid-template-rows: [nav] 5em [primary] 1fr [footer] 5em;
+.window {
+   //grid-column: primary;
+   //grid-row: 1 / end;
+   //z-index: -1;
 
-   @media only screen and (max-width: 90ch) {
-      grid-template-columns: [primary] 1fr;
-   }
-
-
-   //margin-bottom: 2em;
-   line-height: 1.5;
-   height: 100%;
-}
-
-.content p a {
-   color: $link-dark;
-   text-decoration: none;
-   flex: 1 0 auto;
-}
-
-.content img {
-   max-width: 100%;
-   height: auto;
-   background-color: $primary-color;
-}
-
-.content p a:hover {
-   color: saturate(lighten($link-dark, 20%), 20%);
+   background: transparentize($background-color, 0.1);
+   backdrop-filter: blur(6px);
+   border: 2px solid $primary-color;
 }
 
 .page__hero {
@@ -97,12 +107,28 @@ hr {
 .main-content {
    grid-row: primary;
    grid-column: primary;
-   align-self: start;
+   //background-color: $background-color;
+   //clip-path: polygon(5% 5%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
 
    padding: 2ch;
+   //border-left: 1px dashed $text-light;
 
    //border: 1px dotted $text-light;
+}
 
+.main-content p a {
+   color: $link-dark;
+   text-decoration: none;
+   flex: 1 0 auto;
+}
+
+.main-content img {
+   max-width: 100%;
+   height: auto;
+   background-color: $primary-color;
+}
+
+.article {
    h2, h3 {
       margin-top: 0.5em;
       margin-bottom: -0.5em;
@@ -168,15 +194,19 @@ footer {
    grid-column: primary;
    grid-row: footer;
 
-   background: $primary-color;
+   display: grid;
+}
 
-   border-top: $nav-border;
+footer .copyright {
+   display: grid;
+   justify-content: center;
+   align-items: center;
 }
 
 footer .copyright p {
-   color: $text-light;
+   color: $text-color;
    font-size: 10px;
-   //text-align: center;
+   text-align: center;
 }
 
 footer .social {
@@ -185,7 +215,7 @@ footer .social {
 }
 
 footer .social p {
-   color: $text-light;
+   color: $text-color;
    font-size: 0.8em;
    text-align: left;
    float: left;

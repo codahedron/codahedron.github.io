@@ -4,17 +4,20 @@
 {% include head.html %}
 
 <body>
-
    <div class="content">
+
       {% include nav.html %}
 
       {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
       {% include page__hero.html %}
       {% endif %}
 
-      {{ content }}
+      <div class="window main-content">
+         {{ content }}
+      </div>
 
       {% include footer.html %}
+
    </div>
 </body>
 

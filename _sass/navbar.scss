@@ -4,7 +4,7 @@ $nav-item-font-size: 1.1em;
 // NAV BAR
 nav {
    grid-row: nav;
-   grid-column: primary;
+   grid-column: 1/end;
    display: flex;
    flex: 1;
    //height: 100%;

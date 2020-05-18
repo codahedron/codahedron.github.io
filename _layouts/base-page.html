@@ -4,9 +4,9 @@
 {% include head.html %}
 
 <body>
-   <div class="content">
+   {% include nav.html %}
 
-      {% include nav.html %}
+   <div class="content">
 
       {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
       {% include page__hero.html %}
@@ -14,9 +14,9 @@
 
       {{ content }}
 
-      {% include footer.html %}
-
    </div>
+
+   {% include footer.html %}
 </body>
 
 </html>

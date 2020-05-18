@@ -5,12 +5,16 @@ permalink: /projects/
 ---
 {% assign sorted = site.projects | sort: 'title' %}
 
-<article class="projects-content">
+<div class="window centered">
    <h1> Projects </h1>
+</div>
+
+<article class="projects-content">
+
 
    <div class="projects-board">
       {% for project in sorted %}
-      <a href="{{ project.permalink }}" class="project-card">
+      <a href="{{ project.permalink }}" class="project-card window">
          {% if project.thumbnail %}
          <img class="thumbnail" src="{{ project.thumbnail }}" />
          {% endif %}
@@ -19,7 +23,7 @@ permalink: /projects/
             <p> {{ project.description | markdownify }} </p>
          </div>
       </a>
-      {% endfor%}
+      {% endfor %}
 
    </div>
 </article>

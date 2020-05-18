@@ -5,10 +5,9 @@ $nav-item-font-size: 1.1em;
 nav {
    grid-row: nav;
    grid-column: primary;
-   align-self: center;
    display: flex;
    flex: 1;
-   height: 100%;
+   //height: 100%;
    //background: $primary-color;
    //border-top: $nav-border;
    //border-bottom: $nav-border;
@@ -21,7 +20,8 @@ nav {
 
 nav .inner-nav {
    max-width: 120ch;
-   margin: auto;
+   margin-left: auto;
+   margin-right: auto;
    justify-content: right;
    padding-left: 1ch;
    padding-right: 1ch;
@@ -63,8 +63,14 @@ nav .nav-item-left {
    color: $text-color;
    text-decoration: none;
 
-   @media (max-width: 450px) {
+   @media (max-width: 350px) {
       display: none;
+   }
+
+   p {
+      @media (max-width: 550px) {
+         display: none;
+      }
    }
 }
 

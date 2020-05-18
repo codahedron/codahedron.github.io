@@ -28,11 +28,13 @@ html {
 
 body {
    display: grid;
-   grid-template-columns: 1fr;
+   grid-template-columns: $gap-size [primary] 1fr $gap-size;
    grid-template-rows: $gap-size [primary] 1fr $gap-size;
 
-   //background-color: $background-color;
+   // Background from Pixabay
+   // https://www.pexels.com/photo/daylight-environment-forest-idyllic-459225/
    background: url("/assets/images/idyllic-isle-small.jpg");
+
    //background: linear-gradient(90deg, #111a 0%, #111f 10%, #111f 90%, #111a 100%), url("/assets/images/matrix.png");
    background-size: cover;
    background-position: center;
@@ -48,6 +50,7 @@ body {
 .content {
    //min-height: 100%;
    grid-row: primary;
+   grid-column: primary;
 
    display: grid;
    grid-template-columns: 1fr [primary] 80ch 1fr;
@@ -91,9 +94,16 @@ hr {
    //grid-row: 1 / end;
    //z-index: -1;
 
-   background: transparentize($background-color, 0.1);
-   backdrop-filter: blur(6px);
+   background: transparentize($background-color, 0.05);
+   //backdrop-filter: blur(6px);
    border: 2px solid $primary-color;
+}
+
+.centered {
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   padding: 1ch;
 }
 
 .page__hero {

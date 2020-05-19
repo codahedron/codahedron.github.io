@@ -1,7 +1,7 @@
 ---
-title: News
+title: Blog
 author_profile: true
-permalink: /news/
+permalink: /blog/
 ---
 
 <div class="blog-list win-wide-3">

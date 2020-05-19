@@ -24,9 +24,8 @@
          {% else %}
          <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
          {% endif %}
-         {% if post.date %}
-         <span> {{ post.date | date_to_long_string}} </span>
-         {% endif %}
+         <span style="margin-left: 1ch"> {{ post.date | date_to_long_string}}{% if post.author %}, {{ post.author }}{% endif %}
+         </span>
          <hr style="margin:0.4em 0em 0em 0em" />
       </h3>
       {% if post.read_time %}

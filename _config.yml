@@ -20,8 +20,8 @@ name                     : "Codahedron"
 description              : "A description of codahedron."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://codahedron.com" # the base hostname & protocol for your site, e.g. http://example.com
-icon_light: "/codahedron-3-blue.svg"
-icon_dark: "/codahedron-3-gold.svg"
+icon_light: "/assets/images/codahedron-3-blue.svg"
+icon_dark: "/assets/images/codahedron-3-gold.svg"
 
 author:
   name             : ""

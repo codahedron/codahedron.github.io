@@ -25,8 +25,8 @@ Duis auctor, felis vel tempor pretium, odio lacus interdum sem, dapibus laoreet 
       <div>
          <h3>
             <a href="{{ post.url | relative_url }}"> {{ post.title }} </a>
-            <span> {{ post.date | date_to_long_string}} </span>
          </h3>
+         <p style="margin: 0;"> {{ post.date | date_to_long_string}}{% if post.author %}, {{ post.author }}{% endif %} </p>
       </div>
    {% endfor %}
 </div>

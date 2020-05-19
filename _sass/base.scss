@@ -35,9 +35,11 @@ body {
 
    // Background from Pixabay
    // https://www.pexels.com/photo/daylight-environment-forest-idyllic-459225/
-   background: url("/assets/images/idyllic-isle-small.jpg");
+   //
+   background: url("/assets/images/waters-1080.jpg");
+   background-color: $text-color;
    background-size: cover;
-   background-position: center;
+   background-position: top;
    background-attachment: fixed;
    font-family: $monospace;
 
@@ -110,8 +112,8 @@ img {
 }
 
 .window {
-   background: transparentize($background-color, 0.1);
-   //backdrop-filter: blur(6px);
+   background: transparentize($background-color, 0.05);
+   backdrop-filter: blur(6px);
    border: 2px solid $primary-color;
    overflow: hidden;
    padding: 2ch;

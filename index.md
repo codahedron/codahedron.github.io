@@ -11,7 +11,7 @@ layout: base-page
 
 We are Codahedron, a small company based in Gothenburg, Sweden. We develop games, software and provide consultation. Whereas not all software we develop is open source, the open source ideals are very important to us, since it provides positively to both collaboration and competition. Therefore our aim is to produce software in an ethical and as-open-as-possible manner, while maintaining economical viability.
 
-Our first big project is **Network Override**, that is planned to be released at some point in the future. More to come on this later.
+Our first big project is **Network Override**, which is planned to be released at some point in the future. More to come on this later.
 
 </div>
 
@@ -27,13 +27,8 @@ Our first big project is **Network Override**, that is planned to be released at
    {% endfor %}
 </div>
 
-<div class="main-content window win-wide-2" markdown="1">
-<img src="/assets/images/new-zealand-lake-mountains-road-4.jpg">
 
-This is a lake in New Zealand.
-</div>
-
-<div class="main-content window win-wide-2" markdown="1">
+<div class="main-content window" markdown="1">
 
 #### About Us
 

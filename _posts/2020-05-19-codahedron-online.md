@@ -1,7 +1,6 @@
 ---
 title: "Codahedron: Online"
 date: 2020-05-19
-description: Lorem ipsum.
 author: Ecen
 thumb: "/assets/images/codahedron-3-blue.svg"
 ---

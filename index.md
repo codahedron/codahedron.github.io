@@ -7,15 +7,11 @@ layout: base-page
 
 <div class="main-content window win-big" markdown="1">
 
-#### Codahedron
+# Codahedron
 
-We are Codahedron.
+We are Codahedron, a small company based in Gothenburg, Sweden. We develop games, software and provide consultation. Whereas not all software we develop is open source, the open source ideals are very important to us, since it provides positively to both collaboration and competition. Therefore our aim is to produce software in an ethical and as-open-as-possible manner, while maintaining economical viability.
 
-This page is under construction. This is some [news](/news/).
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id ex non arcu mattis fermentum. Curabitur nibh dolor, semper eu nulla rhoncus, congue fermentum nisi. Fusce aliquet mattis odio, sit amet rutrum nibh fringilla et. Fusce id nibh commodo, sagittis purus quis, cursus leo. Nam vel posuere dui. Proin facilisis, lacus id sollicitudin dictum, dolor quam faucibus lacus, eu faucibus ipsum magna et elit. Aliquam erat nisl, vehicula et auctor nec, vehicula id mauris.
-
-Duis auctor, felis vel tempor pretium, odio lacus interdum sem, dapibus laoreet nunc mi sit amet leo. Pellentesque volutpat, lectus non auctor euismod, augue velit hendrerit leo, non placerat ipsum felis nec mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce nulla lorem, lobortis a mattis congue, fringilla sed massa. Sed consequat neque diam, nec volutpat risus elementum et. Nulla aliquam interdum leo, eget lacinia augue lacinia ac. Quisque placerat sodales sapien, vitae fermentum urna convallis et. Aliquam vitae magna arcu. Fusce velit magna, porttitor nec vestibulum ac, gravida ut dolor. Aliquam odio ligula, dapibus eu faucibus ac, dignissim nec ligula. Curabitur ultrices dictum diam facilisis eleifend. In hac habitasse platea dictumst. Praesent tincidunt lectus in magna convallis, quis porttitor orci hendrerit. Fusce posuere elementum viverra.
+Our first big project is **Network Override**, that is planned to be released at some point in the future. More to come on this later.
 
 </div>
 
@@ -37,16 +33,10 @@ Duis auctor, felis vel tempor pretium, odio lacus interdum sem, dapibus laoreet 
 This is a lake in New Zealand.
 </div>
 
-<div class="main-content window win-normal" markdown="1">
-<img src="{{ site.icon_light }}">
-</div>
+<div class="main-content window win-wide-2" markdown="1">
 
-<div class="main-content window win-normal" markdown="1">
+#### About Us
 
-#### Codahedron
-
-We are Codahedron.
-
-This page is under construction.
+Coming soon.
 
 </div>

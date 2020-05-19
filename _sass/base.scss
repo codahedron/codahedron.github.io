@@ -12,10 +12,10 @@ $text-dark: #222831 !default;
 $text-light: #f5f5ff !default;
 $text-color: $text-light;
 
-$link-dark: #0868a0 !default;
+$link-dark: #1a9aff !default;
 
 $border-color: darken($primary-color, 20%);
-$highlight-color: #21adff !default;
+$highlight-color: #ffb110 !default;
 $highlight-time: 0.2s;
 
 $nav-border: 1px dashed $text-color;
@@ -32,21 +32,15 @@ body {
    display: grid;
    grid-template-columns: 1fr [primary] fit-content(120ch) 1fr;
    grid-template-rows: [nav] 60px [primary] 1fr [footer] 60px;
-   //gap: $gap-size;
-   //justify-items: center;
 
    // Background from Pixabay
    // https://www.pexels.com/photo/daylight-environment-forest-idyllic-459225/
    background: url("/assets/images/idyllic-isle-small.jpg");
-
-   //background: linear-gradient(90deg, #111a 0%, #111f 10%, #111f 90%, #111a 100%), url("/assets/images/matrix.png");
    background-size: cover;
    background-position: center;
    background-attachment: fixed;
    font-family: $monospace;
-   //min-width: 30ch;
 
-   //margin-bottom: 2em;
    line-height: 1.5;
    height: 100vh;
 }
@@ -72,7 +66,8 @@ body {
 }
 
 body p a:hover {
-   color: saturate(lighten($link-dark, 20%), 20%);
+   //color: saturate(lighten($link-dark, 20%), 20%);
+   color: $highlight-color;
 }
 
 a {
@@ -83,6 +78,15 @@ a {
 h1, h2, h3, h4, h5, h6 {
    margin: 0;
    padding: 0;
+
+   span {
+      font-weight: normal;
+      font-size: 0.85rem;
+   }
+
+   a:hover {
+      color: $highlight-color;
+   }
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -90,11 +94,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 p {
-   font-size: 0.95em;
+   font-size: 0.95rem;
 }
 
 hr {
-   border: 0.1px solid mix($background-color, $border-color, 90%);
+   border: 0.1px solid $text-color;
    line-height: 0.5;
 }
 
@@ -111,6 +115,10 @@ img {
    border: 2px solid $primary-color;
    overflow: hidden;
    padding: 2ch;
+
+   img {
+      max-height: 300px;
+   }
 }
 
 .win-big {
@@ -127,8 +135,17 @@ img {
    grid-row: span 1;
 }
 
-.win-horizontal {
+.win-wide-2 {
    grid-column: span 2;
+   grid-row: span 1;
+
+   @media only screen and (max-width: $small-screen) {
+      grid-column: span 1;
+   }
+}
+
+.win-wide-3 {
+   grid-column: span 3;
    grid-row: span 1;
 
    @media only screen and (max-width: $small-screen) {
@@ -164,7 +181,7 @@ img {
    //padding: 2ch;
 }
 
-.main-content p a {
+p > a {
    color: $link-dark;
    text-decoration: none;
    flex: 1 0 auto;
@@ -243,12 +260,16 @@ footer {
    grid-row: footer;
 
    display: grid;
+
+   padding: 0 !important;
+   justify-content: center;
+   align-items: center;
 }
 
 footer .copyright {
-   display: grid;
-   justify-content: center;
-   align-items: center;
+   //display: grid;
+   //justify-content: center;
+   //align-items: center;
 }
 
 footer .copyright p {
@@ -281,4 +302,5 @@ footer a:hover {
 
 @import 'navbar';
 @import 'projects';
+@import 'blog';
 @import 'syntax';

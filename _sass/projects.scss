@@ -3,35 +3,37 @@
 $project-card-margin: 1ch;
 
 .projects-content {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: 120px repeat(auto-fit, minmax(100px, 1fr));
+   grid-row-gap: $gap-size;
    //grid-row: primary;
    //grid-column: primary;
 
-   margin-left: auto;
-   margin-right: auto;
-   max-width: 120ch;
-   padding: 2ch;
+   //margin-left: auto;
+   //margin-right: auto;
+   //max-width: 120ch;
+   //padding: 2ch;
 }
 
-//.project-header h1 {
-//   padding: $project-card-margin;
-//}
+.projects-title {
+   grid-column: 1 / end;
+   text-align: center;
+}
 
 .projects-board {
-   margin: auto;
-   display: flex;
-   justify-content: space-around;
-   flex-wrap: wrap;
-   padding: 0;
-   margin-left: - $project-card-margin;
-   margin-right: - $project-card-margin;
+   display: grid;
+   grid-template-columns: repeat(max-content, minmax(100px, 1fr));
+   grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 .project-card {
-   grid-row: span 3;
-   grid-column: span 4;
+   //grid-row: span 3;
+   //grid-column: span 4;
 
    border: 1px solid $border-color;
    border-radius: 2px;
+   max-width: 40ch;
 
    //margin: $project-card-margin;
    //@media screen and (min-width: 400px) {
@@ -77,6 +79,7 @@ $project-card-margin: 1ch;
    padding: 0;
 }
 
+/*
 .back-bar {
    //border-bottom: 1px solid saturate(darken($background-color, 20%), 10%);
    margin-top: 0em;
@@ -133,4 +136,4 @@ $project-card-margin: 1ch;
    background-color: lighten($background-color, 2%);
    transform: scale(1.01) translateY(-1px) translateX(-1px);
    box-shadow: 1px 2px 3px darken(mix($primary-color, $background-color, 10%), 30%);
-}
+}*/

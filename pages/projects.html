@@ -5,26 +5,24 @@ permalink: /projects/
 ---
 {% assign sorted = site.projects | sort: 'title' %}
 
-<div class="window win-wide-2 centered">
-   <h1> Projects </h1>
+<div class="projects-content">
+
+   <div class="window projects-title centered">
+      <h1> Projects </h1>
+   </div>
+
+   <div class="projects-board">
+      {% for project in sorted %}
+      <a href="{{ project.permalink }}" class="window project-card">
+         {% if project.thumbnail %}
+         <img class="thumbnail" src="{{ project.thumbnail }}" />
+         {% endif %}
+         <div class="card-content">
+            <h2>{{ project.title }}</h2>
+            <p> {{ project.description | markdownify }} </p>
+         </div>
+      </a>
+      {% endfor %}
+
+   </div>
 </div>
-
-<!--<article class="projects-content">-->
-
-<!--<div class="projects-board">-->
-{% for project in sorted %}
-<div class="window">
-   <a href="{{ project.permalink }}" class="project-card">
-      {% if project.thumbnail %}
-      <img class="thumbnail" src="{{ project.thumbnail }}" />
-      {% endif %}
-      <div class="card-content">
-         <h2>{{ project.title }}</h2>
-         <p> {{ project.description | markdownify }} </p>
-      </div>
-   </a>
-</div>
-{% endfor %}
-
-<!--</div>-->
-<!--</article>-->

@@ -5,5 +5,5 @@ permalink: /news/
 ---
 
 {% for post in site.posts%}
-  {% include blog-preview.html %}
+   {% include blog-preview.html %}
 {% endfor %}

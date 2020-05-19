@@ -1,8 +1,9 @@
 ---
-layout: content-page
+layout: base-page
 ---
 
-<h1 style="margin-bottom: 0;">{{ page.title }}</h1>
-<p style="margin: 0;">{{ page.date | slice: 0, 10 }}</p>
-
-{{ content }}
+<div class="window">
+   <h1 style="margin-bottom: 0;">{{ page.title }}</h1>
+   <p style="margin: 0;">{{ page.date | slice: 0, 10 }}</p>
+   {{ content }}
+</div>

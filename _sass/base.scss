@@ -28,9 +28,10 @@ html {
 
 body {
    display: grid;
-   grid-template-columns: [primary] 1fr;
+   grid-template-columns: [primary] fit-content(80ch);
    grid-template-rows: [nav] 60px [primary] 1fr [footer] 60px;
    //gap: $gap-size;
+   //justify-items: center;
 
    // Background from Pixabay
    // https://www.pexels.com/photo/daylight-environment-forest-idyllic-459225/
@@ -41,7 +42,7 @@ body {
    background-position: center;
    background-attachment: fixed;
    font-family: $monospace;
-   min-width: 30ch;
+   //min-width: 30ch;
 
    //margin-bottom: 2em;
    line-height: 1.5;
@@ -49,25 +50,21 @@ body {
 }
 
 .content {
-   //min-height: 100%;
    grid-row: primary;
    grid-column: primary;
-   //justify-content: center;
+   //justify-self: center;
 
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(10ch, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
    grid-auto-rows: 10ch;
    grid-gap: $gap-size;
 
    margin-top: $gap-size;
    margin-bottom: $gap-size;
-   margin-left: auto;
-   margin-right: auto;
-   max-width: 120ch;
 
-   @media only screen and (max-width: 60ch) {
-      grid-template-columns: repeat(4, minmax(5ch, 1fr));
-   }
+   //@media only screen and (max-width: 60ch) {
+   //   grid-template-columns: repeat(4, minmax(5ch, 1fr));
+   //}
 }
 
 body p a:hover {
@@ -97,15 +94,27 @@ hr {
    line-height: 0.5;
 }
 
+img {
+   object-fit: contain;
+   width: 100%;
+   max-height: 100%;
+}
+
 .window {
    background: transparentize($background-color, 0.1);
    //backdrop-filter: blur(6px);
    border: 2px solid $primary-color;
+   overflow: hidden;
 }
 
 .win-big {
    grid-column: span 4;
    grid-row: span 4;
+}
+
+.win-normal {
+   grid-column: span 2;
+   grid-row: span 2;
 }
 
 .win-horizontal {
@@ -142,11 +151,11 @@ hr {
    flex: 1 0 auto;
 }
 
-.main-content img {
-   max-width: 100%;
-   height: auto;
-   background-color: $primary-color;
-}
+//.main-content img {
+//   max-width: 100%;
+//   height: auto;
+//   background-color: $primary-color;
+//}
 
 .article {
    h2, h3 {
@@ -211,7 +220,7 @@ td > code {
 
 // FOOTER
 footer {
-   grid-column: primary;
+   grid-column: 1 / end;
    grid-row: footer;
 
    display: grid;

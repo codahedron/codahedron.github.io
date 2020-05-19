@@ -94,7 +94,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 p {
-   font-size: 0.95rem;
+   font-size: 0.9rem;
 }
 
 hr {
@@ -156,6 +156,10 @@ img {
 .win-vertical {
    grid-column: span 1;
    grid-row: span 2;
+}
+
+.win-single {
+   max-width: 80ch;
 }
 
 .centered {

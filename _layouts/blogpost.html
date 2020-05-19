@@ -2,14 +2,11 @@
 layout: base-page
 ---
 
-<div class="blog-post window win-single">
+<div class="window win-single">
    <div>
       <h1 style="margin-bottom: 0;">{{ page.title }}</h1>
       <p style="margin: 0;">{{ page.date | date_to_long_string }}, {{ page.author }}</p>
       <br>
       {{ content }}
    </div>
-   <!--<div class="signature">
-      <p>// {{ page.author }}</p>
-   </div>-->
 </div>

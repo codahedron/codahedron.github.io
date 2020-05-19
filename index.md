@@ -20,31 +20,46 @@ Duis auctor, felis vel tempor pretium, odio lacus interdum sem, dapibus laoreet 
 
 </div>
 
-<div class="main-content window win-horizontal" markdown="0">
+<div class="main-content window win-horizontal" markdown="1">
+<img src="/assets/images/new-zealand-lake-mountains-road-4.jpg">
+
+This is a lake in New Zealand.
+</div>
+
+<div class="main-content window win-normal" markdown="1">
 <img src="{{ site.icon_light }}">
 </div>
 
-<div class="main-content window win-normal" markdown="0">
-<img src="{{ site.icon_light }}">
+<div class="main-content window win-normal" markdown="1">
+
+#### Codahedron
+
+We are Codahedron.
+
+This page is under construction.
+
 </div>
 
 
-<div class="main-content window win-vertical" markdown="0">
+<div class="main-content window win-vertical centered" markdown="1">
+<img src="/assets/images/matrix-vertical.png">
+
+Oooh! Matrix!
+
+</div>
+
+<div class="main-content window win-normal" markdown="1">
 <img src="{{ site.icon_light }}">
 </div>
 
-<div class="main-content window win-normal" markdown="0">
+<div class="main-content window win-normal" markdown="1">
 <img src="{{ site.icon_light }}">
 </div>
 
-<div class="main-content window win-normal" markdown="0">
+<div class="main-content window win-normal" markdown="1">
 <img src="{{ site.icon_light }}">
 </div>
 
-<div class="main-content window win-normal" markdown="0">
-<img src="{{ site.icon_light }}">
-</div>
-
-<div class="main-content window win-normal" markdown="0">
+<div class="main-content window win-normal" markdown="1">
 <img src="{{ site.icon_light }}">
 </div>

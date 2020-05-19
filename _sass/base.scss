@@ -36,13 +36,13 @@ body {
    // Background from Pixabay
    // https://www.pexels.com/photo/daylight-environment-forest-idyllic-459225/
    //
-   background: url("/assets/images/waters-1080.jpg");
-   background-color: $text-color;
+   background: url("/assets/images/waters-1080.jpg"), linear-gradient(90deg, #646060, #737171, #2c364e);
+   //background-color: ;
    background-size: cover;
    background-position: top;
    background-attachment: fixed;
-   font-family: $monospace;
 
+   font-family: $monospace;
    line-height: 1.5;
    height: 100vh;
 }

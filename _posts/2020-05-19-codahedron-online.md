@@ -3,10 +3,8 @@ title: "Codahedron: Online"
 date: 2020-05-19
 description: Lorem ipsum.
 author: Ecen
+thumb: "/assets/images/codahedron-3-blue.svg"
 ---
-
-{: style="text-align:center"}
-![codahedron logo blue](/assets/images/codahedron-3-blue.svg)
 
 The website design is now more or less finished, atleast as far as a website design can be finished... Welcome to our site!
 

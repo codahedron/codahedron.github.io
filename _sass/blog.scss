@@ -3,4 +3,8 @@
    gap: $gap-size;
 
    max-width: 80ch;
+
+   .window {
+      max-height: 20ch;
+   }
 }

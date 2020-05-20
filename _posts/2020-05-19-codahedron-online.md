@@ -2,7 +2,7 @@
 title: "Codahedron: Online"
 date: 2020-05-19
 author: Ecen
-thumb: "/assets/images/codahedron-3-blue.svg"
+thumb: "/assets/images/codahedron-3-gold-light.svg"
 ---
 
 The website design is now more or less finished, atleast as far as a website design can be finished... Welcome to our site!

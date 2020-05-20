@@ -14,8 +14,8 @@ permalink: /projects/
    <div class="projects-board">
       {% for project in sorted %}
       <a href="{{ project.permalink }}" class="window project-card">
-         {% if project.thumbnail %}
-         <img class="thumbnail" src="{{ project.thumbnail }}" />
+         {% if project.thumb %}
+         <img class="thumbnail" src="{{ project.thumb }}" />
          {% endif %}
          <div class="card-content">
             <h2>{{ project.title }}</h2>

@@ -7,7 +7,7 @@ description: "An overview of data structures covering the same topics as an entr
 
 
 __Only available in Swedish.__"
-thumbnail: /projects/data-structures/thumbnail.png
+thumb: /projects/data-structures/thumbnail.png
 ---
 
 # Data Structures Overview

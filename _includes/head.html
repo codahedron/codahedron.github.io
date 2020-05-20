@@ -14,7 +14,13 @@
 <head>
    <meta charset="utf-8">
    <title>{{ page.title }}</title>
+   {% if page.excerpt %}
+   <meta name="description" content="{{ page.excerpt | strip_html }}">
+   <meta property="og:description" content="{{ page.excerpt | strip_html }}">
+   {% else %}
    <meta name="description" content="{{ description }}">
+   <meta property="og:description" content="{{ description }}">
+   {% endif %}
    {% if author.name %}
    <meta name="author" content="{{ author.name | default: author }}">
    {% endif %}
@@ -26,7 +32,7 @@
    <meta property="og:locale" content="{{ site.locale | replace: "-", "_" | default: "en_US" }}">
    <meta property="og:site_name" content="{{ site.title }}">
    <meta property="og:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
-   <meta property="og:description" content="{{ description }}">
+
    <meta property="og:url" content="{{ canonical_url }}">
    {% if page.thumb %}
    <meta property="og:image" content="{{ site.url }}{{ page.thumb }}" />

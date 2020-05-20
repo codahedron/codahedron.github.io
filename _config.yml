@@ -20,6 +20,9 @@ name                     : "Codahedron"
 description              : "Codahedron is a small software company based in Gothenburg, Sweden. We develop games, software and provide consultation."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://codahedron.com" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Site icons intended on light background and dark background, respectively.
+# Note that the default SEO preview is set separately in the head.html include and has to be a png or jpg.
 icon_light: "/assets/images/codahedron-3-gold-light.svg"
 icon_dark: "/assets/images/codahedron-3-gold-dark.svg"
 

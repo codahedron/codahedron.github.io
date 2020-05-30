@@ -9,9 +9,13 @@ layout: base-page
 
 # Codahedron
 
-We are Codahedron, a small company based in Gothenburg, Sweden. We develop games, software and provide consultation. Whereas not all software we develop is open source, the open source ideals are very important to us, since it provides positively to both collaboration and competition. Therefore our aim is to produce software in an ethical and as-open-as-possible manner, while maintaining economical viability.
+We are Codahedron, a company run by two data science students in Gothenburg, Sweden. 
 
-Our first big project is **Network Override**, which is planned to be released at some point in the future. More to come on this later.
+We firmly believe in the importance of a strong open source community, and whereas producing open source software is not our goal, we aim to share what we can of our own work, such that others can use it to create things that might not have been created otherwise. 
+
+In addition, we are very aware of the importance of user privacy in the all-connected world of today. With that in mind, and our backgrounds in data science, we aim to utilize modern data collection and analysis to improve the user experience, while infringing as little as possible on their privacy.
+
+Our first big project is **Network: Override**, a cyberpunk-inspired game about hacking, which is planned to be released at some point in the future.
 
 </div>
 

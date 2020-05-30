@@ -3,29 +3,29 @@ $nav-item-font-size: 1.1em;
 
 // NAV BAR
 nav {
-   grid-row: nav;
+   grid-row   : nav;
    grid-column: 1/end;
-   display: flex;
-   flex: 1;
-   padding: 0 !important;
+   display    : flex;
+   flex       : 1;
+   padding    : 0 !important;
    //height: 100%;
    //background: $primary-color;
    //border-top: $nav-border;
    //border-bottom: $nav-border;
 
    img {
-      width: 50px;
+      width       : 50px;
       margin-right: 1ch;
    }
 }
 
 nav .inner-nav {
-   max-width: 120ch;
-   margin-left: auto;
-   margin-right: auto;
+   max-width      : 120ch;
+   margin-left    : auto;
+   margin-right   : auto;
    justify-content: right;
-   padding-left: 1ch;
-   padding-right: 1ch;
+   padding-left   : 1ch;
+   padding-right  : 1ch;
 
    @media (max-width: 450px) {
       justify-content: center;
@@ -33,35 +33,36 @@ nav .inner-nav {
 }
 
 nav .nav-item {
-   max-width: 120px;
-   min-width: 60px;
-   flex-grow: 1;
-   display: flex;
+   max-width      : 120px;
+   min-width      : 60px;
+   flex-grow      : 1;
+   display        : flex;
    justify-content: center; // X centering
-   align-items: center; // Y centering
-   //background: #f00;
+   align-items    : center; // Y centering
 
-   font-size: $nav-item-font-size;
-   color: $text-color;
+   font-size      : $nav-item-font-size;
+   color          : $text-color;
    text-decoration: none;
-   //font-weight: bold;
 
-   //border-bottom: $nav-item-border-width solid transparent;
-   //border-top: $nav-item-border-width solid transparent;
-   transition: background-color $highlight-time;
+   transition     : background-color $highlight-time, color $highlight-time;
+
+   &:hover {
+      background-color: $text-color;
+      color           : $background-color;
+   }
 }
 
 nav .nav-item-left {
-   margin-right: auto;
+   margin-right   : auto;
    //width: 180px;
-   display: flex;
+   display        : flex;
    justify-content: center; // X centering
-   align-items: center; // Y centering
-   padding: 0;
+   align-items    : center; // Y centering
+   padding        : 0;
 
-   font-size: $nav-item-font-size;
-   font-weight: bold;
-   color: $text-color;
+   font-size      : $nav-item-font-size;
+   font-weight    : bold;
+   color          : $text-color;
    text-decoration: none;
 
    @media (max-width: 350px) {
@@ -73,11 +74,4 @@ nav .nav-item-left {
          display: none;
       }
    }
-}
-
-nav .nav-item:hover {
-   //border-bottom: $nav-item-border-width solid $secondary-color;
-   //border-top: $nav-item-border-width solid transparent;
-   background-color: $text-color;
-   color: $background-color;
 }

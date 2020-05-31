@@ -58,7 +58,8 @@ body::after {
    z-index                  : -1;
    content                  : "";
 
-   animation                : fadeInAnimation ease 1s;
+   opacity                  : 0;
+   //animation                : fadeInAnimation ease 1s;
    animation-iteration-count: 1;
    animation-fill-mode      : forwards;
 }

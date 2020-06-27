@@ -2,10 +2,11 @@
 
 /* colors */
 $background-color: #111 !default;
-$background-color-code: #fafafa;
 
 $primary-color: #26a !default;
 $secondary-color: #383;
+
+$background-color-code: mix($background-color, $primary-color, 60%);
 $tertiary-color: mix($secondary-color, $background-color, 80%);
 
 $text-dark: #222831 !default;

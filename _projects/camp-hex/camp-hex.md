@@ -16,8 +16,8 @@ The game can be downloaded below, but beware that the game is not yet near relea
 {: style="text-align:center"}
 ![thumbnail](/projects/camp-hex/fire.webp)
 
-[Camp Hex 0.2 for any platform](/projects/camp-hex/camp-hex-0.2.jar). Requires Java 14 (or maybe just Java 8).
+[Camp Hex 0.3 for any platform](/projects/camp-hex/0.3.0/camp-hex-0.3.0.jar). Requires Java 14 (or maybe just Java 8).
 
-[Camp Hex 0.2 for Linux](/projects/camp-hex/camp-hex-0.2.deb) (.deb)
+[Camp Hex 0.3 for Linux](/projects/camp-hex/0.3.0/camp-hex-0.3.0.deb) (.deb)
 
 Camp Hex for Windows (no current build).
